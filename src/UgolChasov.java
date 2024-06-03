@@ -13,7 +13,7 @@ public class UgolChasov {
         // Находим разницу между углами
         double angle = Math.abs(hourAngle - minuteAngle);
 
-        // Находим угловую разницу поменьше
+        // Находим угловую разницу поменьше, если это убрать, получается бОльший угол
         if (angle > 180) {
             angle = 360 - angle;
         }
@@ -22,8 +22,8 @@ public class UgolChasov {
     }
 
     public static void main(String[] args) {
-        int hours = 3;
-        int minutes = 45;
+        int hours = 1;
+        int minutes = 54;
         double angle = calculateClockAngle(hours, minutes);
         System.out.println("Угол между часовой и минутной стрелками: " + angle + " градусов");
     }
