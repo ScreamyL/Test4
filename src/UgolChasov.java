@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class UgolChasov {
     public static double calculateClockAngle(int hours, int minutes) {
         if (hours < 0 || hours > 12 || minutes < 0 || minutes > 59) {
@@ -22,9 +25,17 @@ public class UgolChasov {
     }
 
     public static void main(String[] args) {
-        int hours = 1;
-        int minutes = 54;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите часы(12-ти часовой формат): ");
+        int hours = scanner.nextInt();
+
+        System.out.print("Введите минуты: ");
+        int minutes = scanner.nextInt();
+
         double angle = calculateClockAngle(hours, minutes);
         System.out.println("Угол между часовой и минутной стрелками: " + angle + " градусов");
+
+        scanner.close();
     }
 }
